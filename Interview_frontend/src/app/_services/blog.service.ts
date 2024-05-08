@@ -43,7 +43,7 @@ export class BlogService {
   viewUpdate(id : number)
   {
     console.log(id);
-    delay(10000);
+    delay(5000);
     return this.httpClient.get(`${this.blogURL}/views/${id}`);
   }
 //http://localhost:8883/Blogapi/views/13
