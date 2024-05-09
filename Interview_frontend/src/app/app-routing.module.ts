@@ -6,7 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { CreateBlogComponent } from './components/create-blog/create-blog.component';
 import { ShowBlogComponent } from './components/show-blog/show-blog.component';
-import { CommentsComponent } from './components/comments/comments.component';
+// import { CommentsComponent } from './components/comments/comments.component';
 import { authGuard } from './guard/auth.guard';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
@@ -22,7 +22,6 @@ const routes: Routes = [
   {path:'create-blog', canActivate:[authGuard],component:CreateBlogComponent},
   {path:'show-blog',component:ShowBlogComponent},
   {path:'show-blog/blog/:blogid',component:ShowBlogComponent},
-  {path:'comments',component:CommentsComponent},
   {path:'about-page',component:AboutPageComponent},
   {path:'edit-profile',component:EditProfileComponent},
   {path:'search-bar',component:SearchBarComponent}
