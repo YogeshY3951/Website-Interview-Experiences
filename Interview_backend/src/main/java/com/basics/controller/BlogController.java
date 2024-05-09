@@ -74,8 +74,9 @@ public class BlogController {
 		return blogService.upadteViews(blog_id);
 	}
 	
-    @PostMapping("/search-similar-blogs")
-    public List<Blog> searchSimilarBlogs(@RequestBody String sentence) {
+    @PostMapping("/search-similar-blogs/{sentence}")
+    public List<Blog> searchSimilarBlogs(@PathVariable String sentence) {
+    	System.out.println(sentence);
         return flaskService.callFlaskEndpoint(sentence);
     }
 }
